@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="src/rect.js"></script>
+<script type="text/javascript" src="src/tile.js"></script>
+<script type="text/javascript" src="src/leveltest.js"></script>
+
+
+
+<style type="text/css">
+#game_area
+{
+     background-color:rgb(127,127,127);
+     border:1px solid #e5e5e5;
+}
+
+canvas
+{
+	background-image : url("img/background.jpg");
+}
+</style>
+</head>
+<body>
+
+<form id="form">
+<p>
+    m_x : <input type="text" name="prenom" value='' />
+</p>
+
+<canvas height="500" id="game_area" width="921">
+Unfortunely your browser don't support HTML5</canvas>
+<script type="text/javascript">
+
+	test2 = new Game('game_area');
+	test2.init();  
+
+</script>
+</body>
+</html>
