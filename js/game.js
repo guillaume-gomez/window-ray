@@ -37,7 +37,7 @@ function Game ()
 		m_level = new TileSet(m_viewport, cell_size );
 		m_level.constructor();
 		
-		m_ray = new Ray ( 0 , 0 ,0, "light.png",m_viewport);
+		m_ray = new RayOld ( 0 , 0 ,0, "light.png",m_viewport);
 		m_ray.constructor();	
 		
 		MakeEnnemy();
