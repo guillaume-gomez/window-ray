@@ -3,6 +3,28 @@
  **/
 
 
+Ray = function(origin, direction, thickness) {
+    this.ray =  new RayGeom(origin, direction);
+    this.topLeft = new Point(origin.x - thickness/2, origin.y);
+    this.bottomLeft = new Point(origin.x + thickness/2, origin.y);
+    
+    //find later
+    this.topRight = new Point(5000, 5000);
+    this.bottomRight = new Point(6000, 9000);
+}
+
+Ray.prototype.draw = function() {
+    var cxt = jaws.context;
+    cxt.fillStyle = '#f00';
+    cxt.beginPath();
+    cxt.moveTo(this.topLeft.x, this.topLeft.y);
+    cxt.lineTo(this.bottomLeft.x, this.bottomLeft.y);
+    cxt.lineTo(this.bottomRight.x, this.bottomRight.y);
+    cxt.lineTo(this.topRight.x, this.topRight.y);
+    cxt.closePath();
+    cxt.fill();
+};
+
 function RayOld(_x, _y, orientation, urlIMG, viewport) {
     //////////////////////////////
     // Attributs
@@ -182,3 +204,4 @@ function RayOld(_x, _y, orientation, urlIMG, viewport) {
     }
 
 }
+
