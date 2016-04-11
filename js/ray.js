@@ -9,18 +9,18 @@ Ray = function(origin, direction, thickness) {
     this.bottomLeft = new Point(origin.x + thickness/2, origin.y);
     
     //find later
-    this.topRight = new Point(5000, 5000);
-    this.bottomRight = new Point(6000, 9000);
+    this.topRight = new Point(40, 40);
+    this.bottomRight = new Point(6, 90);
 }
 
-Ray.prototype.draw = function() {
+Ray.prototype.draw = function(viewport) {
     var cxt = jaws.context;
     cxt.fillStyle = '#f00';
     cxt.beginPath();
-    cxt.moveTo(this.topLeft.x, this.topLeft.y);
-    cxt.lineTo(this.bottomLeft.x, this.bottomLeft.y);
-    cxt.lineTo(this.bottomRight.x, this.bottomRight.y);
-    cxt.lineTo(this.topRight.x, this.topRight.y);
+    cxt.moveTo(this.topLeft.x - viewport.x, this.topLeft.y - viewport.y);
+    cxt.lineTo(this.bottomLeft.x - viewport.x, this.bottomLeft.y  - viewport.y);
+    cxt.lineTo(this.bottomRight.x - viewport.x, this.bottomRight.y  - viewport.y);
+    cxt.lineTo(this.topRight.x -viewport.x, this.topRight.y  - viewport.y);
     cxt.closePath();
     cxt.fill();
 };
