@@ -38,7 +38,9 @@ function Game ()
 		m_level.constructor();
 		
 		m_ray = new RayOld ( 0 , 0 ,0, "light.png",m_viewport);
-		m_ray.constructor();	
+		m_ray.constructor();
+
+		raytest = new Ray(new Point(0, 0), new Point(1,0), 240);
 		
 		MakeEnnemy();
 		
@@ -100,7 +102,8 @@ function Game ()
 	**/
 	this.draw = function ()
 	{
-		jaws.clear();	
+		jaws.clear();
+		raytest.draw(m_viewport);
 		m_viewport.drawTileMap( m_level.getTileMap() ) ;
 		m_viewport.draw(m_ray.getSpriteList());
 		

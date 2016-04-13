@@ -5,6 +5,7 @@
     <title>Through the Window!</title>
     <link rel="stylesheet" href="css/design.css" type="text/css"  media="screen">
 	<script src="js/jaws.js"></script>
+	<script src="js/bundle.js"></script>
 	<script src="js/geometry.js"></script>
 	<script src="js/personnage.js"></script>
 	<script src="js/enemy.js"></script>

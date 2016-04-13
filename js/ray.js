@@ -2,7 +2,6 @@
  * @brief : Class qui cree et gere le rayon
  **/
 
-
 Ray = function(origin, direction, thickness) {
     this.ray =  new RayGeom(origin, direction);
     this.topLeft = new Point(origin.x - thickness/2, origin.y);
@@ -24,6 +23,10 @@ Ray.prototype.draw = function(viewport) {
     cxt.closePath();
     cxt.fill();
 };
+
+Ray.prototype.detectEndRay = function(tilemap) {
+
+}
 
 function RayOld(_x, _y, orientation, urlIMG, viewport) {
     //////////////////////////////
