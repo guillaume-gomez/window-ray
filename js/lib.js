@@ -1,5 +1,6 @@
-var createRay = require('ray-aabb');
-
+var Lib = window.Lib || {};
+Lib.createRay = require('ray-aabb');
+window.Lib = Lib;
 /*
                     +------+
                    /      /|
@@ -11,7 +12,7 @@ var createRay = require('ray-aabb');
 
 var ray_origin = [-1, 1, 0];
 var ray_direction = [1, 0, 0];
-var ray = createRay(ray_origin, ray_direction);
+var ray = Lib.createRay(ray_origin, ray_direction);
 
 var box = [
   [0, 0, 0],
@@ -34,3 +35,4 @@ console.log(d);
 
 console.log(normal);
 // outputs: [ 0, 0, 0 ]
+

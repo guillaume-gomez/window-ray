@@ -25,8 +25,24 @@ Ray.prototype.draw = function(viewport) {
 };
 
 Ray.prototype.detectEndRay = function(tilemap) {
-
+    var that = this;
+    tilemap.all().some(function(tile) {
+        var ray = window.lib.createRay(this.ray.origin, this.ray.direction);
+        var rect = tile.rect();
+        var box = [
+              [rect.x, rect.y],
+              [rect.x + rect.width, rect.y + rect.height]
+            ];
+        if(ray.intersects(box)) { 
+            //that.topRight = new Point(rect.x, )
+            //update TopRight and TopLeft
+            
+            return true;
+        }
+    });
 }
+
+
 
 function RayOld(_x, _y, orientation, urlIMG, viewport) {
     //////////////////////////////

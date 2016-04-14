@@ -40,7 +40,8 @@ function Game ()
 		m_ray = new RayOld ( 0 , 0 ,0, "light.png",m_viewport);
 		m_ray.constructor();
 
-		raytest = new Ray(new Point(0, 0), new Point(1,0), 240);
+        raytest = new Ray(new Point(0, 0), new Point(1,0), 240);
+        raytest.detectEndRay(m_tile_map);
 		
 		MakeEnnemy();
 		
@@ -58,9 +59,6 @@ function Game ()
 	**/
 	this.update = function () 
 	{
-		
-		
-		
 		if ( jaws.pressed('r') )
 		{
 			resetAll();
