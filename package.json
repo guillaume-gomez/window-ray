@@ -1,0 +1,24 @@
+{
+  "name": "window-ray",
+  "version": "1.0.0",
+  "description": "\"A video game made during a week\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaume-gomez/window-ray.git"
+  },
+  "author": "Guillaume Gomez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guillaume-gomez/window-ray/issues"
+  },
+  "homepage": "https://github.com/guillaume-gomez/window-ray#readme",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "ray-aabb": "^3.0.2",
+    "watchify": "^3.7.0"
+  }
+}
