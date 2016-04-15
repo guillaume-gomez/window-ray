@@ -27,7 +27,7 @@ Ray.prototype.draw = function(viewport) {
 Ray.prototype.detectEndRay = function(tilemap) {
     var that = this;
     tilemap.all().some(function(tile) {
-        var ray = window.lib.createRay(this.ray.origin, this.ray.direction);
+        var ray = window.Lib.createRay(that.ray.origin, that.ray.direction);
         var rect = tile.rect();
         var box = [
               [rect.x, rect.y],
